@@ -68,7 +68,7 @@ public class Order {
 		sb.append("Client: "+client+" \n");
 		sb.append("Order items: \n");
 		for (OrderItem x: items) {
-			sb.append(x.getProduct()+", Quantity: "+x.getQuantity()+", Subtotal: "+x.subTotal()+" \n");
+			sb.append(x.getProduct()+", Quantity: "+x.getQuantity()+", Subtotal: "+String.format("%.2f",x.subTotal())+" \n");
 		}
 		sb.append("Total price: "+ total());
 		return sb.toString();
